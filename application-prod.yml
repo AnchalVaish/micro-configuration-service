@@ -1,1 +1,12 @@
-
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true # this is added so that when eureka server create host name then it will use ip address  to decide
+  client:
+    register-with-eureka: true   	     
+    fetch-registry: true         # by default above two are true
+    service-url:
+      defaultzone : http://localhost:8761/eureka
+spring:
+  application: 
+    name:config-prod
